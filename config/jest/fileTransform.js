@@ -37,4 +37,6 @@ module.exports = {
 
     return `module.exports = ${assetFilename};`;
   },
+  transform: {'^.+\\.[t|j]sx?$': '<rootDir>/config/jest/babelizer.js'},
+  transformIgnorePatterns: ['.*/signal-exit/.*'],
 };
